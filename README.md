@@ -8,23 +8,24 @@ The experiment used a 2 × 2 factorial design manipulating memory load (MSS2 vs 
 
 ## Project structure
 
-├── preprocessed_VMST2/                  # preprocessing pipeline
-│   ├── setup_0.m                        # path setup 
-│   ├── stage01_epoch_preproc.m          # epoching & initial preprocessing
-│   ├── stage02_reref_reject.m           # re-referencing & visual inspection
-│   ├── stage03_eog_append.m             # creating EOG channels
-│   ├── stage04_ica.m                    # ICA 
-│   ├── stage05_remove_components.m      # removing ICA components
-│   ├── stage06_heog_trial_reject.m      # removing hEOG by a step function
-│   └── stage07_final_reject.m           # final visual trial rejection
-├── alpha_lateralisation_tfr_VMST2/      # time–frequency & alpha lateralisation analyses
-│   ├── computeTF.m                      # time–frequency analysis 1:40 Hz
-│   ├── setup_li_power.m                 # setting up channels and other parameters
-│   ├── stage01_compute_li_and_power.m   # compute contralateral/ipsilateral power and LI
-│   ├── stage02_topoplots_by_condition.m # topoplots per condition
-│   ├── stage03_TFRmaps_contraipsi.m     # TFR maps (contra vs ipsi)
-│   └── stage04_plot_TFR_by_condition.m  # TFR plots per condition
+.
+├── preprocessed_VMST2/                   # preprocessing pipeline
+│   ├── setup_0.m                         # path setup
+│   ├── stage01_epoch_preproc.m           # epoching & initial preprocessing
+│   ├── stage02_reref_reject.m            # re-referencing & visual inspection
+│   ├── stage03_eog_append.m              # append/create EOG channels
+│   ├── stage04_ica.m                     # ICA computation
+│   ├── stage05_remove_components.m       # remove artifactual ICs
+│   ├── stage06_heog_trial_reject.m       # HEOG-based trial rejection
+│   └── stage07_final_reject.m            # final visual trial rejection
 │
+├── alpha_lateralisation_tfr_VMST2/       # time–frequency & alpha lateralisation analyses
+│   ├── computeTF.m                       # time–frequency analysis (1–40 Hz)
+│   ├── setup_li_power.m                  # analysis parameters (channels, etc.)
+│   ├── stage01_compute_li_and_power.m    # compute contra/ipsi power & LI
+│   ├── stage02_topoplots_by_condition.m  # topoplots per condition
+│   ├── stage03_TFRmaps_contraipsi.m      # TFR maps (contra vs ipsi)
+│   └── stage04_plot_TFR_by_condition.m   # TFR plots per condition
 │
 └── README.md
 
