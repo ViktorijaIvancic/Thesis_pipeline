@@ -8,6 +8,7 @@ The experiment used a 2 × 2 factorial design manipulating memory load (MSS2 vs 
 
 ## Project structure
 
+```
 .
 ├── preprocessed_VMST2/                   # preprocessing pipeline
 │   ├── setup_0.m                         # path setup
@@ -28,6 +29,8 @@ The experiment used a 2 × 2 factorial design manipulating memory load (MSS2 vs 
 │   └── stage04_plot_TFR_by_condition.m   # TFR plots per condition
 │
 └── README.md
+
+```
 
 First, complete the preprocessing steps in the outlined order. Following that, run computeTF.m. Follow the rest of the files in order, outlined above.  
 
